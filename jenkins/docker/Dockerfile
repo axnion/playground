@@ -10,7 +10,10 @@ RUN apt-get -y install software-properties-common
 
 # Install Gradle
 RUN add-apt-repository ppa:cwchien/gradle
-# RUN ls /etc/apt/sources.list.d/cwchien-gradle-jessie.list
 RUN sed -i 's/jessie/trusty/g' /etc/apt/sources.list.d/cwchien-gradle-jessie.list
 RUN apt-get update
 RUN apt-get -y install gradle
+
+# Install NodeJS
+RUN curl -sL https://deb.nodesource.com/setup_7.x | bash -
+RUN apt-get install -y nodejs
