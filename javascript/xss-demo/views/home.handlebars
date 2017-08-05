@@ -1,0 +1,12 @@
+<form method="post" action="/add" class="addForm">
+    <textarea name="text" placeholder="Text"></textarea>
+    <button>Add Entry</button>
+</form>
+
+<ul class="entries">
+    {{#each entries}}
+        <li>
+            {{{text}}}
+        </li>
+    {{/each}}
+</ul>
