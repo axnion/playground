@@ -1,8 +1,8 @@
-package tracker.idleMonitoring;
+package tracker.libs.idleMonitoring;
 
 import org.jnativehook.GlobalScreen;
 import org.jnativehook.NativeHookException;
-import tracker.Entry;
+import tracker.libs.Entry;
 
 import java.util.logging.Level;
 import java.util.logging.Logger;

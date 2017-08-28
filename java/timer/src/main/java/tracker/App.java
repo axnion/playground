@@ -1,34 +1,30 @@
 package tracker;
 
-import static spark.Spark.*;
 
-import tracker.idleMonitoring.IdleTimer;
+import javafx.application.Application;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
+import javafx.scene.layout.HBox;
+import javafx.stage.Stage;
 
 /**
  * Class tracker.App
  *
  * @author Axel Nilsson (axnion)
  */
-public class App {
-    private IdleTimer idleTimer;
-
-
+public class App extends Application {
     public static void main(String[] args) {
-        get("/start", (req, res) -> {
-            return "";
-        });
-
-
-
-        IdleTimer timer = new IdleTimer(new Entry());
-        timer.run();
+        launch(args);
     }
 
-    private void startTimer() {
+    public void start(Stage primaryStage) {
+        primaryStage.setTitle("Timer");
+        Button btn = new Button("Start");
 
-    }
+        HBox root = new HBox();
+        root.getChildren().add(btn);
 
-    private void stopTimer() {
-
+        primaryStage.setScene(new Scene(root, 300, 250));
+        primaryStage.show();
     }
 }

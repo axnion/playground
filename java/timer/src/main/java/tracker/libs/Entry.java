@@ -1,7 +1,7 @@
-package tracker;
+package tracker.libs;
 
 /**
- * Class tracker.Entry
+ * Class tracker.libs.Entry
  *
  * @author Axel Nilsson (axnion)
  */
